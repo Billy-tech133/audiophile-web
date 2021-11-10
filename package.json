@@ -1,0 +1,42 @@
+{
+  "name": "gatsby-starter-hello-world",
+  "private": true,
+  "description": "A simplified bare-bones starter for Gatsby",
+  "version": "0.1.0",
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "@fontsource/manrope": "^4.5.1",
+    "babel-plugin-styled-components": "^1.13.3",
+    "gatsby": "^4.1.0",
+    "gatsby-background-image": "^1.5.3",
+    "gatsby-plugin-image": "^2.1.0",
+    "gatsby-plugin-sharp": "^4.1.0",
+    "gatsby-plugin-styled-components": "^5.1.0",
+    "gatsby-source-strapi": "^1.0.2",
+    "gatsby-transformer-sharp": "^4.1.0",
+    "gbimage-bridge": "^0.1.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-icons": "^4.3.1",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
