@@ -13,7 +13,7 @@ module.exports = {
         apiURL: "http://localhost:1337",
         queryLimit: 5000, // Defaults to 100
         collectionTypes: [`Product-modal`, `Speaker`],
-        singleTypes: [`hero`],
+        singleTypes: [`hero`, `addreview`],
       },
     },
     `gatsby-plugin-styled-components`,

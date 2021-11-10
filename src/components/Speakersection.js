@@ -140,7 +140,7 @@ const ThirdText = styled.div`
   width: 90vw;
   height: 300px;
   margin: 20px 0;
-  padding: 30px 15px;
+  padding: 40px 60px;
   @media screen and (min-width: 785px) {
     max-width: 50%;
     margin-left: 50px;
