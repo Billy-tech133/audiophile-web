@@ -33,6 +33,7 @@ export const GlobalStyle = createGlobalStyle`
     --height: 100%;
     --defaultFontSize: 87.5%;
     --borderRadius-one: 8px;
+     --transition: all 0.3s linear;
 }
 body {
     font-family: 'Manrope', sans-serif;
@@ -116,8 +117,7 @@ p {
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 1.0px;
-    text-transform: uppercase;
-    /* line-height: 1.9px; */
+    line-height: 1.9;
 }
 
 .orange-btn {
@@ -160,5 +160,15 @@ p {
 .image-card {
     height: 400px;
     width: 400px;
+}
+.modal {
+    position: fixed;
+}
+
+.dark-shadow {
+      background-color: var(--black-two);
+      opacity: 0.6;
+      min-height: 100vh;
+      width: 100vw;
 }
 `

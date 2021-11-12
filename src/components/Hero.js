@@ -23,7 +23,6 @@ const Hero = () => {
       }
     }
   `)
-  console.log(data)
 
   return (
     <HeroWrapper>

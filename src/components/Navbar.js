@@ -4,11 +4,12 @@ import data from "../constants/links"
 import { Link } from "gatsby"
 import { FiShoppingCart, FiAlignJustify } from "react-icons/fi"
 import { StaticImage } from "gatsby-plugin-image"
-const Navbar = () => {
+import Productmodal from "./Productmodal"
+const Navbar = ({ toggleModal, showModal }) => {
   return (
     <NavBar>
       <InnerNav>
-        <Hamburg />
+        <Hamburg onClick={toggleModal} />
         <Logo className="link" to="/">
           <StaticImage
             src="../assets/shared/desktop/logo.svg"
@@ -26,9 +27,14 @@ const Navbar = () => {
             )
           })}
         </LinkWrap>
-
         <Cart />
       </InnerNav>
+      {showModal && (
+        <Modalwrapper>
+          <Productmodal />
+          <div className="dark-shadow"></div>
+        </Modalwrapper>
+      )}
     </NavBar>
   )
 }
@@ -38,13 +44,20 @@ const NavBar = styled.section`
   background-color: var(--black-two);
   padding: 20px 0;
 `
+const Modalwrapper = styled.div`
+  position: absolute;
+  display: block;
+  z-index: 3;
+  transition: var(--transition);
+`
+
 const InnerNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: var(--white-one);
   width: 90%;
-  margin: auto;
+  margin: 0 auto 20px;
   @media screen and (min-width: 785px) {
     justify-content: space-between;
     max-width: 80vw;
@@ -87,6 +100,7 @@ const Cart = styled(FiShoppingCart)`
 
 const Hamburg = styled(FiAlignJustify)`
   font-size: 28px;
+  cursor: pointer;
   @media screen and (min-width: 1440px) {
     display: none;
   }

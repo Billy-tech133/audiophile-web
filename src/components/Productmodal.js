@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { FaAngleRight } from "react-icons/fa"
+
 const Productmodal = () => {
   const data = useStaticQuery(graphql`
     {
@@ -22,7 +23,7 @@ const Productmodal = () => {
       }
     }
   `)
-  console.log(data)
+
   return (
     <Modalwrapper>
       <InnerWrapper>
@@ -35,7 +36,7 @@ const Productmodal = () => {
           } = item
           const Image = getImage(localFile)
           return (
-            <ModalCard key={id}>
+            <ModalCard key={id} to={`/${productName}`}>
               <CardImage
                 image={Image}
                 layout="fixed"
@@ -60,6 +61,8 @@ const Modalwrapper = styled.main`
   width: 99vw;
   margin: auto;
   height: 100%;
+  background: var(--white-one);
+  transition: var(--transition);
 `
 const InnerWrapper = styled.section`
   height: 100%;
@@ -70,10 +73,11 @@ const InnerWrapper = styled.section`
     max-width: 80vw;
     flex-direction: row;
     justify-content: space-between;
-    margin: 50px auto 50px;
+    margin: 0 auto 50px;
   }
 `
-const ModalCard = styled.article`
+const ModalCard = styled(Link)`
+  text-decoration: none;
   z-index: 2;
   text-align: center;
   display: flex;
@@ -81,6 +85,7 @@ const ModalCard = styled.article`
   align-items: center;
   justify-content: space-evenly;
   background-color: var(--white-three);
+  color: var(--black-three);
   background-size: 50%;
   width: 90vw;
   margin: 20px auto;
