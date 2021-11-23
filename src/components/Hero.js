@@ -29,7 +29,7 @@ const Hero = () => {
       {data.allStrapiHero.nodes.map(item => {
         const {
           bgImage: { localFile },
-          id,
+
           title,
           product,
           description,
