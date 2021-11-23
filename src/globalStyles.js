@@ -1,9 +1,8 @@
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
-*  {
+*, ::before, ::after {
     box-sizing: border-box;
-    overscroll-behavior: none;
     margin: 0;
     padding: 0;
 }
@@ -35,6 +34,10 @@ export const GlobalStyle = createGlobalStyle`
     --borderRadius-one: 8px;
      --transition: all 0.3s linear;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 body {
     font-family: 'Manrope', sans-serif;
     font-weight: 500;
@@ -42,7 +45,6 @@ body {
     line-height: 25px;
     margin: 0;
     padding: 0;
-    min-width: auto;
     min-height: 100vh;
 
 }
@@ -51,7 +53,7 @@ body {
 
 html {
   font-size: var(--defaultFontSize);
-  width: auto;
+
 }
 @media only screen and (min-width: 576px) {
   :root {

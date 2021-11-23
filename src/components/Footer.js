@@ -55,6 +55,9 @@ const FooterWrap = styled.section`
   width: 100vw;
   background-color: var(--black-two);
   padding: 30px 15px;
+  @media screen and (min-width: 1440px) {
+    padding: 0 15px;
+  }
 `
 const Logo = styled(Link)``
 
@@ -69,8 +72,8 @@ const NavWrap = styled.div`
   }
   @media screen and (min-width: 1440px) {
     justify-content: space-between;
-    margin: 50px 0;
     flex-direction: row;
+    align-items: center;
   }
 `
 const LinkWrap = styled.ul`

@@ -100,7 +100,7 @@ const CatergoryCard = styled.article`
   @media screen and (min-width: 1440px) {
     flex-direction: row;
   }
-  :nth-child(2) {
+  :nth-child(2n) {
     @media screen and (min-width: 1440px) {
       flex-direction: row-reverse;
     }
@@ -120,11 +120,6 @@ const ProdText = styled.div`
     align-items: flex-start;
     margin: 0 60px;
   }
-  /* :nth-child(2) {
-    @media screen and (min-width: 1440px) {
-      margin-left: 0;
-    }
-  } */
 `
 const ProdCta = styled.h6`
   margin: 15px 0;

@@ -62,7 +62,6 @@ const Hero = () => {
 const HeroWrapper = styled.main`
   width: 100vw;
   background-color: var(--black-two);
-  /* overflow: overlay; */
 `
 const HeroWrap = styled.section`
   display: flex;

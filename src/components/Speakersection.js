@@ -111,7 +111,7 @@ const ThirdInner = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 90vw;
+  width: 90%;
   height: 100%;
   margin: auto;
   @media screen and (min-width: 785px) {
