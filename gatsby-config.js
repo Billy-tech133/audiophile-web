@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: "http://localhost:1339",
+        apiURL: "https://audiophile-ecommerce-web.herokuapp.com",
         queryLimit: 5000, // Defaults to 100
         collectionTypes: [`Product-modal`, `Speaker`],
         singleTypes: [`hero`, `addreview`],
